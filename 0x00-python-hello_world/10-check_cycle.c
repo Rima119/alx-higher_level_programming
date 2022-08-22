@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdio.h>
 
 /**
  * check_cycle - C function that checks if a singly linked
@@ -9,20 +10,23 @@
 
 int check_cycle(listint_t *list)
 {
-	listint_t *cr;
+	listint_t *cr = list;
+	listint_t *tl = list;
 
 	if (list == NULL)
 	{
 		return (0);
 	}
-	cr = list->next;
-	while (cr != NULL)
+
+	while (tl != NULL && tl->next != NULL)
 	{
+		cr = cr->next;
+		tl = tl->next->next;
+
 		if (cr == list)
 		{
 			return (1);
 		}
-		cr = cr->next;
 	}
 	return (0);
 }
