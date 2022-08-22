@@ -10,22 +10,20 @@
 
 int check_cycle(listint_t *list)
 {
-	listint_t *cr;
-	listint_t *tl;
+	listint_t *cr = list;
+	listint_t *tl = list;
 
 	if (list == NULL)
 	{
 		return (0);
 	}
 
-	cr = list;
-	tl = list;
-	while (tl != NULL && tl->next != NULL)
+	while (cr != NULL && tl != NULL && tl->next != NULL)
 	{
 		cr = cr->next;
 		tl = tl->next->next;
 
-		if (cr == list)
+		if (cr == tl)
 		{
 			return (1);
 		}
