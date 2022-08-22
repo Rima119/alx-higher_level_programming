@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 -m comp_scr -b "$PYFILE"; mv ./__pycache__/*.pyc "${PYFILE}c"
+python3 -m compilall -b $PYFILE
