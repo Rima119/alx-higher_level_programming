@@ -4,7 +4,7 @@
  * check_cycle - C function that checks if a singly linked
  * list has a cycle in it
  * @list: singly linked list
- * Retrun: 0 if there is no cycle, 1 if there is a cycle
+ * Return: 0 if there is no cycle, 1 if there is a cycle
  */
 
 int check_cycle(listint_t *list)
