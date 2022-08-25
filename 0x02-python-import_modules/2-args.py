@@ -2,8 +2,10 @@
 if __name__ == "__main__":
     from sys import argv
     lnum = len(argv)
-    if (lnum <= 1):
-        print("{:d} argument.".format(lnum - 1))
+    if (lnum == 0):
+        print("{:d} arguments".format(lnum - 1))
+    elif (lnum == 1):
+        print("{:d} argument".format(lnum - 1))
     elif (lnum == 2):
         print("{:d} argument:".format(lnum - 1))
     else:
