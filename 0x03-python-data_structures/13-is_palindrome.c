@@ -13,8 +13,7 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *s = *head;
 	char b[1000];
-	int m = 0;
-	size_t p = 0;
+	unsigned int p = 0, m = 0;
 
 	if (*head == NULL || (*head)->next == NULL)
 	{
