@@ -10,7 +10,7 @@
 
 int is_palindrome(listint_t **head)
 {
-	listint_t *s = *head;
+	listint_t *s;
 	int a = 0, b;
 	int c[1000];
 
@@ -18,6 +18,8 @@ int is_palindrome(listint_t **head)
 	{
 		return (1);
 	}
+
+	s = *head;
 	while (s != NULL)
 	{
 		c[a] = s->n;
