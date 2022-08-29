@@ -11,14 +11,16 @@
 
 int is_palindrome(listint_t **head)
 {
-	listint_t *s = *head;
+	listint_t *s;
 	char b[1000];
-	unsigned int p = 0, m = 0;
+	int m = 0;
+	size_t p = 0;
 
 	if (*head == NULL || (*head)->next == NULL)
 	{
 		return (1);
 	}
+	s = *head;
 	while (s != NULL)
 	{
 		p++;
@@ -38,4 +40,4 @@ int is_palindrome(listint_t **head)
 		}
 	}
 	return (1);
-
+}
