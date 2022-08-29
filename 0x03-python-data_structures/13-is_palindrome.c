@@ -26,6 +26,7 @@ int is_palindrome(listint_t **head)
 		a++;
 		s = s->next;
 	}
+	a--;
 	for (b = 0; b < a; b++)
 	{
 		if (c[b] == c[a])
