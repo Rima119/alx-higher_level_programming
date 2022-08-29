@@ -10,21 +10,23 @@
 
 int is_palindrome(listint_t **head)
 {
-	listint_t *s = *head;
+	listint_t *s;
 	int a, b;
 	int c[2046];
 	
 	if (head != NULL)
-		return (0); 
+		return (0);
 	if (*head == NULL || (*head)->next == NULL)
 		return (1);
 
+	s = *head;
 	while (s != NULL)
 	{
 		c[a] = s->n;
-		s = s->next;
 		a++;
+		s = s->next;
 	}
+	a--;
 	for (b = 0, a++; b < a; a--, b++)
 	{
 		if (c[b] == c[a])
