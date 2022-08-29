@@ -28,7 +28,7 @@ int is_palindrome(listint_t **head)
 	p--;
 	while (m < p)
 	{
-		if (b[m] == buffer[p])
+		if (b[m] == b[p])
 		{
 			m++;
 			p--;
