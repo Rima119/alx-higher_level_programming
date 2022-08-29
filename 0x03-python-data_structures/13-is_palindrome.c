@@ -12,7 +12,7 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *s;
 	int a = 0, b;
-	int c[1000];
+	char c[1000];
 
 	if (*head == NULL || (*head)->next == NULL)
 	{
@@ -28,7 +28,7 @@ int is_palindrome(listint_t **head)
 	}
 	for (b = 0; b < a; b++)
 	{
-		if (c[b] == c[a - 1])
+		if (c[b] == c[a])
 		{
 			a--;
 		}
