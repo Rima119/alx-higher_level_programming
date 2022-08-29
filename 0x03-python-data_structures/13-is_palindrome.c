@@ -20,7 +20,7 @@ int is_palindrome(listint_t **head)
 	{
 		return (1);
 	}
-	while (s)
+	while (s != NULL)
 	{
 		p++;
 		s = s->next;
@@ -39,4 +39,4 @@ int is_palindrome(listint_t **head)
 		}
 	}
 	return (1);
-}
+
