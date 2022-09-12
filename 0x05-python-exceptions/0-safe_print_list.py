@@ -3,8 +3,8 @@ def safe_print_list(my_list=[], x=0):
     p = 0
     for n in range(x):
         try:
-            print("{}".format(my_list[n]), end='')
-        except:
+            print("{}".format(my_list[n]), end="")
+        except Exception:
             break
         else:
             p += 1
