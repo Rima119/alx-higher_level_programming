@@ -50,7 +50,7 @@ class Square:
 
     def my_print(self):
         """Prints in stdout the square with the character #"""
-        print(self.__str__())a
+        print(self.__str__())
 
     def __str__(self):
         a = ""
