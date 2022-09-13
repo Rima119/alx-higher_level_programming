@@ -11,7 +11,7 @@ class Square:
             size: size of a square
             position: position of a square
         """
-        self.size = size
+        self.__size = size
         self.position = position
 
     def area(self):
@@ -52,8 +52,7 @@ class Square:
         if self.__size == 0:
             print()
         for n in range(self.__size):
-            for m in range(self.__size):
-                print("#", end="")
-            for p in range(self.position[0]):
-                print(" ", end='')
+            print(" " * self.__position[0], end="")
+            print("#" * self.__size)
+        for m in range(self.__position[1]):
             print()
