@@ -10,13 +10,13 @@ class Square:
         Args:
             size: size of a square
         """
-        self.__size = size
+        self.size = size
 
     def __eq__(self, other):
         return self.__size == other.size
 
     def __ne__(self, other):
-         return self.__size != other.size
+        return self.__size != other.size
 
     def __gt__(self, other):
         return self.__size > other.
