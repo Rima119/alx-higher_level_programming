@@ -19,7 +19,7 @@ class Square:
         return self.__size != other.size
 
     def __gt__(self, other):
-        return self.__size > other.
+        return self.__size > other.size
 
     def __ge__(self, other):
         return self.__size >= other.size
