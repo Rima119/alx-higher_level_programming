@@ -15,14 +15,18 @@ class Square:
         self.position = position
 
     def __str__(self):
-        a = ""
-        if self.__size == 0:
-            return a
-        for n in range(self.position[1]):
-            a += "\n"
-        for m in range(self.size):
-            a += ' ' * self.position[0] + '#' * self.size
-        return a
+        """Define print()"""
+        if self.__size != 0:
+            for n in range(0, self.__position[1]):
+                print("")
+        for m in range(0, self.__size):
+            for p in range(0, self.__position[0]):
+                print(" ", end="")
+            for s in range(0, self.__size):
+                print("#", end="")
+            if m != self.__size - 1:
+                print("")
+        return ("")
 
     def area(self):
         """Returns the current square area"""
