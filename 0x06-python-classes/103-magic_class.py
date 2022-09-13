@@ -4,7 +4,6 @@ import math
 """MagicClass Class"""
 
 
-
 class MagicClass:
     """class that does exactly the same as the following Python bytecode"""
     def __init__(self, radius=0):
