@@ -11,8 +11,8 @@ class Square:
             size: size of a square
             position: position of a square
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     def area(self):
         """Returns the current square area"""
