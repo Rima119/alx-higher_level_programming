@@ -21,7 +21,7 @@ class Square:
         for n in range(self.position[1]):
             a += "\n"
         for m in range(self.size):
-            a += += ' ' * self.position[0] + '#' * self.size
+            a += ' ' * self.position[0] + '#' * self.size
         return a
 
     def area(self):
