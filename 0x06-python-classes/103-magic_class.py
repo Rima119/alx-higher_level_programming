@@ -8,7 +8,7 @@ class MagicClass:
     """class that does exactly the same as the following Python bytecode"""
     def __init__(self, radius=0):
         self.__radius = 0
-        if type(radius) != int and type(radius) != float:
+        if type(radius) is not int and type(radius) is not float:
             raise TypeError('radius must be a number')
         self.__radius = radius
 
