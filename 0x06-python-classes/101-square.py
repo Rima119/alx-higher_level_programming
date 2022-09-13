@@ -14,6 +14,16 @@ class Square:
         self.size = size
         self.position = position
 
+    def __str__(self):
+        a = ''
+        if self.__size == 0:
+            pass
+        for n in range(self.position[1]):
+            a += "\n"
+        for m in range(self.size):
+            a += += ' ' * self.position[0] + '#' * self.size
+        return a
+
     def area(self):
         """Returns the current square area"""
         return (self.__size * self.__size)
@@ -58,14 +68,3 @@ class Square:
         for n in range(self.size):
             print(" " * self.__position[0], end="")
             print("#" * self.size)
-
-    def __str__(self):
-        a = ""
-        if self.size == 0:
-            return a
-        else:
-            for n in range(self.position[1]):
-                a += '\n'
-            for m in range(self.size):
-                a += ' ' * self.position[0] + '#' * self.size
-        return a
