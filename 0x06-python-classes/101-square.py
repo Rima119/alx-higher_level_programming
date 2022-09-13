@@ -50,14 +50,15 @@ class Square:
 
     def my_print(self):
         """Prints in stdout the square with the character #"""
-        print(self.__str__())
+        print(self.__str__())a
 
     def __str__(self):
         a = ""
         if self.size == 0:
             return a
-        for n in range(self.position[1]):
-            a += '\n'
-        for m in range(self.size):
-            a += ' ' * self.position[0] + '#' * self.size
+        else:
+            for n in range(self.position[1]):
+                a += '\n'
+            for m in range(self.size):
+                a += ' ' * self.position[0] + '#' * self.size
         return a
