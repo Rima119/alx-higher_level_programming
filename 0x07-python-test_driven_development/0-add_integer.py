@@ -4,11 +4,9 @@
 
 def add_integer(a, b=98):
     """function that adds 2 integers
-    
     Args:
         a: first number
         b: second number
-    
     Return:
           The sum of the two numbers
     """

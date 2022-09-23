@@ -1,5 +1,5 @@
 The ``0-add_integer`` module
-============================
+=============================
 
 Using ``add_integer``
 ---------------------
@@ -34,3 +34,15 @@ Adding None
   Traceback (most recent call last):
             ...
   TypeError: a must be an integer
+
+Case Float overflow
+   >>> add_integer(float('inf'),9)
+   Traceback (most recent call last):
+          ...
+   OverflowError: cannot convert float infinity to integer
+
+Case Nan:
+   >>> add_integer(float('NaN'), 9)
+   Traceback (most recent call last):
+              ...
+   ValueError: cannot convert float NaN to integer
