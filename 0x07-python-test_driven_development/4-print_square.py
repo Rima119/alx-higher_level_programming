@@ -4,7 +4,6 @@
 
 def print_square(size):
     """ function that prints a square with the character #
-    
     Args:
         size: the size length of the square
     """
