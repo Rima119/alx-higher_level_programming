@@ -10,4 +10,4 @@ def is_kind_of_class(obj, a_class):
         obj: an object
         a_class: a class
     """
-     return isinstance(obj, a_class)
+    return isinstance(obj, a_class)
