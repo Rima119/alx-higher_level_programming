@@ -12,6 +12,5 @@ if __name__ == "__main__":
         list_p = load_from_json_file(file)
     except FileNotFoundError:
         list_p = []
-    for n in sys.argv[1:]:
-        list_p.append(n)
+    list_p.extend(sys.argv[1:])
     save_to_json_file(list_p, file)
