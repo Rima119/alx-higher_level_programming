@@ -13,5 +13,5 @@ if __name__ == "__main__":
     except Exception:
         list_p = []
     for n in sys.argv[1:]:
-            list_p.append(n)
+        list_p.append(n)
     save_to_json_file(list_p, file)
