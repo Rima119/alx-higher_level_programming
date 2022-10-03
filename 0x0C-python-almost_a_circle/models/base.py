@@ -43,6 +43,6 @@ class Base:
         if cls.__name__ is "Rectangle":
             m = cls(1, 1)
         elif cls.__name__ is "Square":
-            m = = cls(1)
+            m = cls(1)
         m.update(**dictionary)
         return m
