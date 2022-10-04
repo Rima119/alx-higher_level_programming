@@ -25,3 +25,19 @@ class Square(Rectangle):
         """set the size of square"""
         self.width = value
         self.height = value
+
+    def update(self, *args, **kwargs):
+        """assigns attributes"""
+        if args:
+            for kv in range(len(args)):
+                if kv == 0:
+                    self.id = args[kv]
+                if kv == 1:
+                    self.size = args[kv]
+                if kv == 2:
+                    self.x = args[kv]
+                if kv == 3:
+                    self.y = args[kv]
+        else:
+            for k, v in kwargs.items():
+                setattr(self, k, v)
