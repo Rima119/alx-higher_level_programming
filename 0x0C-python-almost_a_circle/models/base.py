@@ -65,3 +65,68 @@ class Base:
                 return m
         except Exception:
             return m
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """serializes in CSV"""
+        filename = cls.__name__ + ".csv"
+        if list_objs is not None:
+            with open(filename, "w") as f:
+                m = csv.writer(f)
+                for j in list_objs:
+                    if cls.__name__ == "Square":
+                        m.writerow([j.id, j.width, j.x, j.y])
+                    if cls.__name__ == "Rectangle":
+                        m.writerow([j.id, j.width, j.height, j.x, j.y])
+        else:
+            with open(filename, "w") as f:
+                f.write("[]")
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """deserializes in CSV"""
+        filename = cls.__name__ + ".csv"
+        obj = []
+        with open(filename, "r", newline='') as f:
+            read = csv.reader(f)
+            for row in read:
+                if cls.__name__ == "Square":
+                    d = {"id": int(row[0]),
+                         "size": int(row[1]),
+                         "x": int(row[2]),
+                         "y": int(row[3])}
+                if cls.__name__ == "Rectangle":
+                    d = {"id": int(row[0]),
+                         "width": int(row[1]),
+                         "height": int(row[2]),
+                         "x": int(row[3]),
+                         "y": int(row[4])}
+                create = cls.create(**d)
+                obj.append(create)
+        return obj
+
+    @classmethod
+    def draw(list_rectangles, list_squares):
+        """opens a window and draws all the Rectangles and Squares"""
+        figure = turtle.Screen()
+        figure.pensize(4)
+        figure.color("#827bbe")
+        figure.hideturtle()
+        figure.shape("turtle")
+        allfig = list_rectangles + list_squares
+
+        for cre in allfig:
+            figure.showturtle()
+            figure.up()
+            figure.goto(cre.x, cre.y)
+            figure.down()
+            figure.forward(cre.width)
+            figure.left(90)
+            figure.forward(cre.height)
+            figure.left(90)
+            figure.forward(cre.width)
+            figure.left(90)
+            figure.forward(cre.height)
+            figure.left(90)
+
+        figure.exitonclick()
