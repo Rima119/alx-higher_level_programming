@@ -108,11 +108,11 @@ class Base:
     @classmethod
     def draw(list_rectangles, list_squares):
         """opens a window and draws all the Rectangles and Squares"""
-        figure = turtle.Screen()
+        figure = turtle.Turtle()
         figure.pensize(4)
         figure.color("#827bbe")
-        figure.hideturtle()
         figure.shape("turtle")
+        figure.hideturtle()
         allfig = list_rectangles + list_squares
 
         for cre in allfig:
@@ -129,4 +129,4 @@ class Base:
             figure.forward(cre.height)
             figure.left(90)
 
-        figure.exitonclick()
+        turtle.exitonclick()
