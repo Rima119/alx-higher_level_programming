@@ -2,7 +2,7 @@
 
 let n = process.argv[2];
 
-if (!isNaN(parseInt(n))) {
+if (!isNaN(parseInt(process.argv[2]))) {
   for (let i = 0; i < n; i++) {
     console.log('C is fun');
   }
