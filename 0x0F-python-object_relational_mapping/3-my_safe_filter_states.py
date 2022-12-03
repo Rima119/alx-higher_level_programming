@@ -11,8 +11,8 @@ from sys import argv
 if __name__ == "__main__":
     conn = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
                            password=argv[2], db=argv[3])
-    cursor = conn.cursor()
-    cursor.execute("""SELECT * FROM states WHERE BINARY name
+    cur = conn.cursor()
+    cur.execute("""SELECT * FROM states WHERE BINARY name
                    LIKE %(name)s ORDER BY states.id
                    """, {'name': arg[4]})
     states = cur.fetchall()
