@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-isplays all values in the states table of hbtn_0e_0_usa where name matches
+Displays all values in the states table of hbtn_0e_0_usa where name matches
 the argument. But this time, write one that is safe from MySQL injections!
 """
 
@@ -12,7 +12,7 @@ if __name__ == "__main__":
                            password=argv[2], db=argv[3])
     cur = conn.cursor()
     cur.execute("""SELECT * FROM states WHERE BINARY name
-            LIKE %(name)s ORDER BY states.id""", {'name': arg[4]})
+            LIKE %(name)s ORDER BY states.id""", {'name': argv[4]})
     states = cur.fetchall()
 
     for state in states:
