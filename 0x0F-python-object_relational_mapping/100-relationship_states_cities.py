@@ -22,4 +22,5 @@ if __name__ == "__main__":
     nState.cities.append(nCity)
 
     session.add(nState)
+    session.add(nCity)
     session.commit()
