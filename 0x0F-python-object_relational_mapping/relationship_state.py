@@ -8,6 +8,7 @@ from sqlalchemy.orm import relationship
 
 Base = declarative_base()
 
+
 class State(Base):
     """State class
     Attributes:
