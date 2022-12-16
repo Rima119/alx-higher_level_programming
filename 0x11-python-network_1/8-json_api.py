@@ -13,7 +13,7 @@ if __name__ == "__main__":
     req = requests.post('http://0.0.0.0:5000/search_user', data=data)
 
     try:
-        obj = r.json()
+        obj = req.json()
         if not obj:
             print('No result')
         else:
