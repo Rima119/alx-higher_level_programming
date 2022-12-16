@@ -12,4 +12,4 @@ if __name__ == "__main__":
     url = request.Request(sys.argv[1], email)
     with request.urlopen(url) as response:
         html = response.read()
-    print(content.decode())
+        print("{}".format(html.decode('utf-8')))
